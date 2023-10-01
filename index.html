@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culebrita</title>
+    <link rel="stylesheet" href="culebrita.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <h2 class="mt-5">LA CULEBRA MAS MAMONA QUE EXISTEEEEEEEE RAZAAAAAAA</h2>
+        
+        <br>
+
+        <label><h5>Dificultad: </h5></label>
+        <select id="dificultad">
+            <option value="200">Facil</option>
+            <option value="100" selected>Normal</option>
+            <option value="50">Dificil</option>
+            <option value="30">Albañil</option>
+        </select>
+        
+        <br>
+
+        <label><h5>Color: </h5></label>
+        <input type="color" id="color" value="#cc19fd">
+        <br>
+        <label><h5>Manzana: </h5></label>
+        <input type="color" id="color-m" value="#c02a2a">
+
+        <br>
+
+        <button id="iniciar" class="mt-4" onclick="btnIniciar()"><h2>Iniciar</h2></button>
+    </div>
+    <div class="game" hidden="hidden">
+        <div>puntos: <span id="puntos">000</span></div>
+        <div class="malla">
+            <div class="fila">
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+            </div>
+            <div class="fila">
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+            </div>
+            <div class="fila">
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+            </div>
+            <div class="fila">
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+            </div>
+            <div class="fila">
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+            </div>
+            <div class="fila">
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+            </div>
+            <div class="fila">
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+            </div>
+            <div class="fila">
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+            </div>
+            <div class="fila">
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+            </div>
+            <div class="fila">
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+            </div>
+            <div class="fila">
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+            </div>
+            <div class="fila">
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+            </div>
+            <div class="fila">
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+            </div>
+            <div class="fila">
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+            </div>
+            <div class="fila">
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+            </div>
+            <div class="fila">
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+            </div>
+            <div class="fila">
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+            </div>
+            <div class="fila">
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+            </div>
+            <div class="fila">
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+            </div>
+            <div class="fila">
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+                <div class="casilla"></div>
+            </div>
+        </div>
+        <div id="notificacion" hidden="hidden">
+            <h2>TE MURISTE</h2>
+            <button id="reiniciar" class="mt-4" onclick="btnReiniciar()"><h2>Reintentar</h2></button>
+        </div>
+    </div>
+    <script src="culebrita.js"></script>
+</body>
+</html>
