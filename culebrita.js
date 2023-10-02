@@ -92,8 +92,6 @@ function aparecerManzana(){
         }
     }
 
-    console.log(disponible.length);
-
     let posicion_manzana = disponible[Math.floor(Math.random() * disponible.length)];
 
     malla_data[posicion_manzana[0]][posicion_manzana[1]] = 2;
@@ -226,19 +224,19 @@ document.addEventListener('keydown', function(e){
     // PON MISUQUITA
 
     if (permite_click){
-        if((e.code == 'KeyW' || e.code == 'ArrowUp') && direccion != 'abajo'){
+        if((e.code == 'KeyW' || e.code == 'ArrowUp') && direccion != 'abajo' && direccion != 'arriba'){
             direccion = 'arriba';
             permite_click = false;
         }
-        if((e.code == 'KeyS' || e.code == 'ArrowDown') && direccion != 'arriba'){
+        if((e.code == 'KeyS' || e.code == 'ArrowDown') && direccion != 'arriba' && direccion != 'abajo'){
             direccion = 'abajo';
             permite_click = false;
         }
-        if((e.code == 'KeyA' || e.code == 'ArrowLeft') && direccion != 'derecha'){
+        if((e.code == 'KeyA' || e.code == 'ArrowLeft') && direccion != 'derecha' && direccion != 'izquierda'){
             direccion = 'izquierda';
             permite_click = false;
         }
-        if((e.code == 'KeyD' || e.code == 'ArrowRight') && direccion != 'izquierda'){
+        if((e.code == 'KeyD' || e.code == 'ArrowRight') && direccion != 'izquierda' && direccion != 'derecha'){
             direccion = 'derecha';
             permite_click = false;
         }
